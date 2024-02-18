@@ -1,0 +1,24 @@
+.button {
+  background-color: #2352DE;
+  padding: 12px 24px;
+  font-size: 18px;
+  color: #fff;
+  border: 1px solid rgba(0, 0, 0, 0);
+
+  &:hover {
+    cursor: pointer;
+    background-color: #fff;
+    border: 1px solid #2352DE;
+    color: #2352DE;
+  }
+
+  &:focus {
+    box-shadow: 0 0 0 3px #2352DE80;
+  }
+
+  &:active {
+    box-shadow: 0 7px 4px 0 #00000040 inset;
+    background-color: #2352DE;
+    color: #fff;
+  }
+}

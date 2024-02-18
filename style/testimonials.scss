@@ -1,0 +1,187 @@
+@import "variables&templates";
+
+.testimonials {
+  padding: 140px 0;
+  background: rgb(246, 246, 248);
+}
+
+.testimonials__container {
+  @extend %container;
+}
+
+.testimonials__title {
+  text-align: center;
+}
+
+.testimonials__content {
+  max-width: 1060px;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.testimonials__testimonial {
+  max-width: 400px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.testimonials__photo {
+  position: relative;
+  width: 130px;
+  height: 130px;
+  margin-bottom: 30px;
+
+  a {
+    display: none;
+  }
+
+  img {
+    border-radius: 100%;
+    width: 100%;
+  }
+
+  .testimonials__video {
+    display: flex;
+    position: absolute;
+    left: 94px;
+    top: 90px;
+    width: 60px;
+    height: 60px;
+    align-items: center;
+    justify-content: center;
+    background-image: url("../img/testimonials/facebook.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    outline: none;
+    border-radius: 100%;
+
+    img {
+      display: block;
+      border-radius: 0;
+      margin-left: 2px;
+      width: 17px;
+      height: 20px;
+    }
+
+    .testimonials__player-background {
+      border-radius: 100%;
+    }
+  }
+
+}
+
+.testimonials__name {
+  color: rgb(35, 82, 222);
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 130%;
+  letter-spacing: 0;
+  text-align: left;
+  margin-bottom: 20px;
+}
+
+.testimonials__opinion {
+  color: rgb(51, 51, 51);
+  font-size: 24px;
+  font-weight: 300;
+  line-height: 130%;
+  letter-spacing: 0;
+  text-align: center;
+  font-style: italic;
+}
+
+.testimonials__video-link {
+  display: block;
+  width: 100%;
+  max-width: 570px;
+  outline: none;
+
+
+  &:focus {
+    box-shadow: 0 0 0 3px #2352DE80;
+  }
+}
+
+.testimonials__video {
+  width: 100%;
+  aspect-ratio: 1.425/1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-image: url("../img/testimonials/facebook.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  position: relative;
+  outline: none;
+
+
+  &:hover .testimonials__play img {
+    height: 129px;
+  }
+
+  &:hover .testimonials__player-background {
+    background: #00000099;
+  }
+
+  &:active .testimonials__play img {
+    height: 50px;
+  }
+
+  &:active .testimonials__player-background {
+    background: #00000073;
+  }
+
+  .testimonials__play {
+    position: absolute;
+
+    img {
+      height: 100px;
+      transition: .3s;
+
+    }
+  }
+
+  .testimonials__player-background {
+    width: 100%;
+    height: 100%;
+    background-color: #0000004D;
+    transition: 0.3s;
+  }
+}
+
+
+@media (max-width: 770px) {
+  .testimonials {
+    padding: 50px 0;
+  }
+
+
+  .testimonials__content {
+    justify-content: center;
+  }
+  .testimonials__photo {
+    a {
+      display: block;
+    }
+  }
+
+  .testimonials__video-link {
+    display: none;
+  }
+  .testimonials__name {
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 130%;
+  }
+  .testimonials__opinion {
+    font-size: 16px;
+    font-weight: 300;
+    line-height: 130%;
+  }
+}
